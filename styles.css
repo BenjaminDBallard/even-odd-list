@@ -2,7 +2,7 @@
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
   }
-  
+
   section {
     background-color: #b1deef;
     min-height: 20px;
@@ -11,6 +11,10 @@
     text-align: center;
     padding: 5% auto;
     border: 1px solid #264653;
+  }
+
+  h1{
+    text-align: center;
   }
   
   h2 {
@@ -49,6 +53,12 @@
   E76F51 - 🧡 
    */
   
+#even-odd-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
    #myInput {
     background-image: url('/css/searchicon.png'); /* Add a search icon to input */
     background-position: 10px 12px; /* Position the search icon */

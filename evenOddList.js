@@ -2,14 +2,19 @@ let usersWord = "";
 let oddList = document.getElementById("odd");
 let evenList = document.getElementById("even");
 
+// override new tab on "enter" keypress
+function handleSubmit(){
+  return false;
+}
+// Update word to be evaluated
 function updateWord(element) {
   usersWord = element.value;
 
   console.log(usersWord);
 }
 
-
-function handleSubmit() {
+// evaluate word length and place in list
+function wordSubmit() {
   let newListItem = document.createElement("LI");
   newListItem.innerText = usersWord;
 
@@ -22,9 +27,6 @@ function handleSubmit() {
 
   usersWord = "";
   document.getElementById("even-odd-form").reset();
+  
 }
 
-// function reloadCancel() {
-//     if (e.keycode == 13);
-//     return false;
-// }

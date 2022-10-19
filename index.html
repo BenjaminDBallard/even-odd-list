@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Even/Odd List</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Even Odd Lists</h1>
-    <hr/> 
-
-    <form id="even-odd-form" autocomplete="off" target="_blank">
-      <div> 
-        <label for="word">word</label> 
-        <input type="text" name="word" id="word"  placeholder="what's your word?" onkeyup="updateWord(this), reloadCancel()"> 
+    <hr />
+    <!-- handleSubmit defaults to opening a new tab when the enter key was pressed. over-ridden in JS -->
+    <form
+      id="even-odd-form"
+      autocomplete="off"
+      target="_blank"
+      onsubmit="return handleSubmit()"
+    >
+      <div class="Input">
+        <label for="word">word</label>
+        <input
+          type="text"
+          name="word"
+          id="word"
+          placeholder="what's your word?"
+          onkeyup="updateWord(this)"
+        />
       </div>
       <div>
-        <input type="button" value="Even or Odd?" onclick="handleSubmit()">
+        <input type="button" value="Even or Odd?" onclick="wordSubmit()" />
       </div>
     </form>
     <section>
-        <h2>Even</h2>
-        <ul id="even"></ul>
-      </section>
-      <section>
-        <h2>Odd</h2>
-        <ul id="odd"></ul>
-      </section>
+      <h2>Even</h2>
+      <ul id="even"></ul>
+    </section>
+    <section>
+      <h2>Odd</h2>
+      <ul id="odd"></ul>
+    </section>
     <script src="evenOddList.js"></script>
-</body>
+  </body>
 </html>
