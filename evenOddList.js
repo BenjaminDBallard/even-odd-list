@@ -24,7 +24,7 @@ function handleSubmit() {
   document.getElementById("even-odd-form").reset();
 }
 
-function reloadCancel() {
-    if (e.keycode == 13);
-    return false;
-}
+// function reloadCancel() {
+//     if (e.keycode == 13);
+//     return false;
+// }
